@@ -1,0 +1,18 @@
+{
+  "name": "freest-client",
+  "version": "1.0.0",
+  "description": "FreeST LSP Client",
+  "author": "Diogo Barros",
+  "license": "ISC",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/vscode": "^1.63.0",
+    "@vscode/test-electron": "^2.1.2"
+  }
+}
