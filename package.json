@@ -1,6 +1,6 @@
 {
   "name": "freest-lsp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "FreeST LSP",
   "description": "FreeST language support powered by the FreeST language server",
   "icon": "resources/FreeST.png",
