@@ -1,8 +1,3 @@
-/* --------------------------------------------------------------------------------------------
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- * ------------------------------------------------------------------------------------------ */
-
 import { commands, ExtensionContext, QuickPickItem, Terminal, window, workspace } from 'vscode';
 
 import {
@@ -14,6 +9,19 @@ import {
 let client: LanguageClient;
 
 export function activate(context: ExtensionContext) {
+
+	// check for haskell
+	// TODO
+	
+	// check for stack
+	// TODO
+
+	// check for freestlspserver 
+	// TODO
+	// if ( not installed )
+	// then { download zip, unzip, stack install } 
+	// install
+
 	
 	let serverOptions: ServerOptions = {
 		run: { command: 'freestlspserver',

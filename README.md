@@ -1,9 +1,16 @@
 ## How to install
-Currently this extension is not available in VSCode's marketplace, so its 
- 	installation is rather manual. First, one chooses and downloads the 
-	preferred version (usually the most recent).
-	From here, there are 2 ways to install the extension into VSCode: using 
-	VSCode's 'Install from VSIX...' option, or a common terminal.
+The extension has 3 installation options: VSCode Marketplace, manual, and terminal. 
+Check the instructions for your preferred method, although we recomend the marketplace.
+	
+Because the extension depends on the `freestlspserver` executable, independently of your 
+installation choice, you will have to install the aformentioned executable by hand.
+For this, you can either clone [this](https://github.com/freest-lang/freest-lsp-server) git repository
+and follow its instructions, or download and run 
+[this](https://github.com/freest-lang/freest-lsp-server/blob/main/install-lsp-server.md) script
+using `./install-lsp-server`.
+
+### Visual Studio Code Marketplace
+Search for `FreeST LSP` in the `Extensions` tab in VSCode.
 
 ### Manual install from VSIX
 

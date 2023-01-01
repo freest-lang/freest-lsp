@@ -1,17 +1,32 @@
 {
   "name": "freest-lsp",
+  "version": "1.0.0",
   "displayName": "FreeST LSP",
   "description": "FreeST language support powered by the FreeST language server",
   "icon": "resources/FreeST.png",
-  "version": "1.0.0",
+  "publisher": "diogofpbarros",
   "author": "Diogo Barros",
-  "license": "ISC",
-  "categories": ["Programming Languages"],
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freest-lang/freest-lsp"
+  },
+  "categories": [
+    "Programming Languages",
+    "Language Packs",
+    "Linters"
+  ],
   "keywords": [
-    "freest"
+    "freest",
+    "linter",
+    "fst"
   ],
   "engines": {
     "vscode": "^1.63.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.17.0",
+    "typescript": "^4.6.2"
   },
   "activationEvents": [
     "onLanguage:FreeST",
@@ -20,21 +35,25 @@
   ],
   "main": "./client/out/extension",
   "scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -b",
-		"watch": "tsc -b -w",
-		"postinstall": "cd client && npm install && cd .."
-	},
-  "devDependencies": {
-    "@types/node": "^14.17.0",
-    "typescript": "^4.6.2"
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "install": "cd client && npm install && cd .."
   },
   "contributes": {
-    "languages": [{
+    "languages": [
+      {
         "id": "FreeST",
-        "aliases": ["freest", "fst"],
-        "extensions": [".fst", ".freest"]
-    }],
+        "aliases": [
+          "freest",
+          "fst"
+        ],
+        "extensions": [
+          ".fst",
+          ".freest"
+        ]
+      }
+    ],
     "menus": {
       "editor/context": [
         {
