@@ -61,11 +61,11 @@
       "editor/context": [
         {
           "command": "freest.run",
-          "when": "editorTextFocus"
+          "when": "editorTextFocus && resourceExtname == .fst"
         },
         {
           "command": "freest.load",
-          "when": "editorTextFocus"
+          "when": "editorTextFocus && resourceExtname == .fst"
         }
       ]
     },
