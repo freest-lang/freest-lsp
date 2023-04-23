@@ -54,7 +54,7 @@ export function activate(context: ExtensionContext) {
 
 	// Commands
 	context.subscriptions.push(commands.registerCommand('freest.run', () => {
-		const file = window.activeTextEditor.document.uri.path;
+		const file = getActiveTextEditorPath();
 		const terminal = getFreestTerminal();
 
 		terminal.sendText(`freest ${file}`);
@@ -62,7 +62,7 @@ export function activate(context: ExtensionContext) {
 	}));
 
 	context.subscriptions.push(commands.registerCommand('freest.load', () => {
-		const file = window.activeTextEditor.document.uri.path;
+		const file = getActiveTextEditorPath();
 		const terminal = getFreestTerminal();
 
 		terminal.sendText(`freesti`);
@@ -104,6 +104,10 @@ export function deactivate(): Thenable<void> | undefined {
 // 	}
 // 	return true;
 // }
+
+function getActiveTextEditorPath() {
+	return window.activeTextEditor.document.uri.fsPath;
+}
 
 function getFreestTerminal():Terminal {
 	const FREEST_TERMINAL_NAME = "FreeST";
