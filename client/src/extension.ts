@@ -65,8 +65,7 @@ export function activate(context: ExtensionContext) {
 		const file = getActiveTextEditorPath();
 		const terminal = getFreestTerminal();
 
-		terminal.sendText(`freesti`);
-		terminal.sendText(`:l ${file}`)
+		terminal.sendText(`freesti ${file}`);
 		terminal.show(true);
 	}));
 
